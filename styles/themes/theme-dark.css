@@ -1,0 +1,100 @@
+/*
+ * Dark Theme
+ * This file contains all color variables for the dark theme
+ */
+
+:root[data-theme="dark"] {
+  /* Primary Colors */
+  --theme-primary: #6366f1;
+  --theme-primary-hover: #818cf8;
+  --theme-primary-light: rgba(99, 102, 241, 0.2);
+  
+  /* Background Colors */
+  --theme-background: #0f172a;
+  --theme-background-secondary: #1e293b;
+  --theme-background-tertiary: #334155;
+  --theme-surface: #1e293b;
+  --theme-surface-elevated: #334155;
+  
+  /* Text Colors */
+  --theme-text-primary: #f1f5f9;
+  --theme-text-secondary: #e2e8f0;
+  --theme-text-tertiary: #cbd5e1;
+  --theme-text-muted: #94a3b8;
+  --theme-text-inverse: #0f172a;
+  
+  /* Border Colors */
+  --theme-border: #334155;
+  --theme-border-light: #475569;
+  --theme-border-dark: #1e293b;
+  
+  /* Link Colors */
+  --theme-link: #60a5fa;
+  --theme-link-hover: #93c5fd;
+  
+  /* Status Colors */
+  --theme-success: #22c55e;
+  --theme-success-light: rgba(34, 197, 94, 0.2);
+  --theme-warning: #f59e0b;
+  --theme-warning-light: rgba(245, 158, 11, 0.2);
+  --theme-error: #ef4444;
+  --theme-error-light: rgba(239, 68, 68, 0.2);
+  --theme-info: #3b82f6;
+  --theme-info-light: rgba(59, 130, 246, 0.2);
+  
+  /* Component Specific Colors */
+  --theme-header-bg: #1e293b;
+  --theme-header-text: #f1f5f9;
+  --theme-nav-dropdown-bg: #334155;
+  
+  --theme-course-header-bg: #334155;
+  --theme-course-header-text: #f1f5f9;
+  
+  --theme-button-primary-bg: #6366f1;
+  --theme-button-primary-text: white;
+  --theme-button-primary-hover: #818cf8;
+  
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text: #6366f1;
+  --theme-button-secondary-border: #6366f1;
+  --theme-button-secondary-hover-bg: rgba(99, 102, 241, 0.1);
+  
+  --theme-card-bg: #1e293b;
+  --theme-card-border: #334155;
+  --theme-card-shadow: rgba(0, 0, 0, 0.3);
+  
+  --theme-input-bg: #334155;
+  --theme-input-border: #475569;
+  --theme-input-text: #f1f5f9;
+  
+  --theme-overlay-bg: rgba(0, 0, 0, 0.9);
+  
+  /* Hover and Interaction States */
+  --theme-hover-bg: #334155;
+  --theme-hover-bg-light: rgba(255, 255, 255, 0.05);
+  --theme-active-bg: #475569;
+  
+  /* Progress Colors */
+  --theme-progress-bg: rgba(255, 255, 255, 0.1);
+  --theme-progress-fill: #22c55e;
+  
+  /* Module/Content Colors */
+  --theme-module-icon: #3b82f6;
+  --theme-module-completed: #22c55e;
+  --theme-module-in-progress: #f59e0b;
+  
+  /* Sidebar Colors */
+  --theme-sidebar-bg: #1e293b;
+  --theme-sidebar-border: #334155;
+  --theme-sidebar-section-border: #334155;
+  
+  /* User Avatar Colors */
+  --theme-avatar-bg: #475569;
+  --theme-avatar-text: #f1f5f9;
+  
+  /* Dropdown Menu Colors */
+  --theme-dropdown-bg: #1e293b;
+  --theme-dropdown-border: #334155;
+  --theme-dropdown-shadow: rgba(0, 0, 0, 0.5);
+  --theme-dropdown-hover: #334155;
+}

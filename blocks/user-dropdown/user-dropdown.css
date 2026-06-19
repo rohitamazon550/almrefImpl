@@ -1,0 +1,254 @@
+/* User Dropdown Block Styles */
+.user-dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-dropdown-loading {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.user-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* User Profile Button */
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.user-profile-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.user-profile-btn:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* User Avatar */
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar .avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-avatar .avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #666;
+  border-radius: 50%;
+}
+
+.user-avatar .avatar-placeholder svg {
+  width: 20px;
+  height: 20px;
+}
+
+.user-avatar .avatar-placeholder svg circle {
+  fill: #e0e0e0;
+}
+
+.user-avatar .avatar-placeholder svg path {
+  fill: #999;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+  color: #666;
+  transition: transform 0.2s;
+  width: 10px;
+  height: 10px;
+}
+
+.user-profile-btn[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: all 0.15s;
+  z-index: 1000;
+  display: none;
+}
+
+.user-dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+/* Dropdown Arrow Pointer */
+.user-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+}
+
+.user-dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #e0e0e0;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-size: 0.8rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.dropdown-item:focus {
+  background: #f8f9fa;
+  outline: none;
+}
+
+.dropdown-item svg {
+  color: #666;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.dropdown-item:hover svg {
+  color: #4f46e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-dropdown-menu {
+    right: -4px;
+    min-width: 120px;
+  }
+
+  .user-dropdown-menu::before,
+  .user-dropdown-menu::after {
+    right: 16px;
+  }
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-dropdown-menu.show {
+  animation: fadeInDown 0.15s ease-out;
+}
+
+/* Focus states for accessibility */
+.user-profile-btn:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.dropdown-item:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: -2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .user-dropdown-menu {
+    border: 2px solid #000;
+  }
+  
+  .dropdown-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .user-dropdown-menu,
+  .dropdown-arrow,
+  .user-profile-btn {
+    transition: none;
+  }
+  
+  .user-dropdown-menu.show {
+    animation: none;
+  }
+}

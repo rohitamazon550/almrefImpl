@@ -1,0 +1,543 @@
+/* Profile Block Styles */
+.profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--theme-background-secondary, #f8f9fa);
+  min-height: 100vh;
+}
+
+/* Profile Container */
+.profile-container {
+  background: var(--theme-card-bg, white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--theme-card-shadow, rgba(0, 0, 0, 0.1));
+  border: 1px solid var(--theme-card-border, transparent);
+  overflow: hidden;
+}
+
+/* Profile Header */
+.profile-header {
+  padding: 40px 40px 20px 40px;
+  background: var(--theme-card-bg, white);
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--theme-text-primary, #333);
+  margin: 0;
+}
+
+/* User Info Section */
+.user-info-section {
+  padding: 20px 40px 40px 40px;
+  background: var(--theme-background-secondary, #f8f9fa);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+}
+
+.user-avatar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--theme-border, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--theme-card-bg, white);
+  box-shadow: 0 2px 8px var(--theme-card-shadow, rgba(0, 0, 0, 0.1));
+}
+
+.user-details {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.user-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--theme-text-primary, #333);
+  margin: 0 0 8px 0;
+}
+
+.user-email {
+  font-size: 1rem;
+  color: var(--theme-text-tertiary, #666);
+  margin: 0;
+}
+
+.change-image-btn {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.change-image-btn:hover {
+  color: #4338ca;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 40px;
+  background: var(--theme-card-bg, white);
+  border-top: 1px solid var(--theme-border, #e0e0e0);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--theme-text-primary, #333);
+  margin: 0 0 16px 0;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: var(--theme-text-tertiary, #666);
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.skill-interest-item {
+  background: var(--theme-background-secondary, #f8f9fa);
+  border: 1px solid var(--theme-border, #e0e0e0);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-interest-item:hover {
+  background: var(--theme-hover-bg, #f0f0f0);
+  border-color: var(--theme-border-hover, #d0d0d0);
+}
+
+.skill-interest-item:hover .delete-skill-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--theme-text-primary, #333);
+}
+
+/* Delete Skill Button */
+.delete-skill-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(102, 102, 102, 0.9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.delete-skill-btn:hover {
+  background: rgba(220, 53, 69, 0.9);
+  transform: scale(1.1);
+}
+
+.delete-skill-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.delete-skill-btn svg path {
+  stroke: white;
+  stroke-width: 2;
+}
+
+/* Deleting state */
+.skill-interest-item.deleting {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.skill-interest-item.deleting::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #ccc;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Skill Tooltip */
+.skill-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skill-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-content {
+  background: #333;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  text-align: left;
+}
+
+.tooltip-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tooltip-content p {
+  margin: 0 0 12px 0;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #333;
+}
+
+/* No Skills State */
+.no-skills {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.no-skills p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Profile Actions */
+.profile-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modify-interest-btn {
+  background: var(--theme-button-primary-bg, #4f46e5);
+  color: var(--theme-button-primary-text, white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modify-interest-btn:hover {
+  background: var(--theme-button-primary-hover, #4338ca);
+}
+
+/* Profile Footer */
+.profile-footer {
+  padding: 40px;
+  background: var(--theme-card-bg, white);
+  border-top: 1px solid var(--theme-border, #e0e0e0);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-changes-btn {
+  background: var(--theme-button-primary-bg, #4f46e5);
+  color: var(--theme-button-primary-text, white);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-changes-btn:hover {
+  background: var(--theme-button-primary-hover, #4338ca);
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  color: var(--theme-text-tertiary, #666);
+}
+
+.error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  color: #dc3545;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    padding: 20px 10px;
+  }
+
+  .profile-header {
+    padding: 30px 20px 15px 20px;
+  }
+
+  .profile-title {
+    font-size: 1.5rem;
+  }
+
+  .user-info-section {
+    padding: 15px 20px 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user-details {
+    padding-top: 16px;
+  }
+
+  .user-name {
+    font-size: 1.5rem;
+  }
+
+  .change-image-btn {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .skills-section {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .skill-interest-item {
+    padding: 20px;
+  }
+
+  .profile-footer {
+    padding: 30px 20px;
+  }
+
+  .save-changes-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-image,
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-name {
+    font-size: 1.25rem;
+  }
+
+  .user-email {
+    font-size: 0.875rem;
+  }
+
+  .skill-interest-item {
+    padding: 16px;
+  }
+
+  .skill-name {
+    font-size: 0.875rem;
+  }
+}
+
+/* Skill Selection Styles */
+.skill-selection-item {
+  background: var(--theme-background-secondary, #f8f9fa);
+  border: 1px solid var(--theme-border, #e0e0e0);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-selection-item:hover {
+  background: var(--theme-hover-bg, #f0f0f0);
+  border-color: var(--theme-border-hover, #d0d0d0);
+}
+
+.skill-selection-item.selected {
+  background: #e3f2fd;
+  border: 2px solid #4f46e5;
+  border-color: #4f46e5;
+}
+
+.skill-selection-item.selected .skill-name {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* Skill Selection Actions */
+.skill-selection-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: flex-start;
+}
+
+.add-interest-btn {
+  background: var(--theme-button-primary-bg, #4f46e5);
+  color: var(--theme-button-primary-text, white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-interest-btn:hover:not(:disabled) {
+  background: var(--theme-button-primary-hover, #4338ca);
+}
+
+.add-interest-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.cancel-selection-btn {
+  background: transparent;
+  color: var(--theme-button-primary-bg, #4f46e5);
+  border: 2px solid var(--theme-button-primary-bg, #4f46e5);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-selection-btn:hover {
+  background: var(--theme-button-primary-bg, #4f46e5);
+  color: var(--theme-button-primary-text, white);
+}
+
+/* Animation for skill items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-interest-item,
+.skill-selection-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Focus states for accessibility */
+.modify-interest-btn:focus,
+.save-changes-btn:focus,
+.change-image-btn:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.skill-interest-item:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}

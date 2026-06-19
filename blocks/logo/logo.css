@@ -1,0 +1,57 @@
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--theme-text-primary, #000);
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--theme-text-primary, #000);
+  white-space: nowrap;
+}
+
+/* Mobile adjustments */
+@media (max-width: 899px) {
+  .logo-image {
+    height: 32px;
+    max-width: 150px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+}
+
+/* Ensure logo fits well in header */
+.nav-brand .logo {
+  margin: 0;
+}

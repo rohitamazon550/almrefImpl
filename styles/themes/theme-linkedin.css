@@ -1,0 +1,101 @@
+/*
+ * LinkedIn Theme
+ * This file contains all color variables for the LinkedIn-inspired theme
+ * Based on LinkedIn's official brand colors
+ */
+
+:root[data-theme="linkedin"] {
+  /* Primary Colors - LinkedIn Blue */
+  --theme-primary: #0A66C2;
+  --theme-primary-hover: #004182;
+  --theme-primary-light: rgba(10, 102, 194, 0.1);
+  
+  /* Background Colors */
+  --theme-background: #F3F2EF;
+  --theme-background-secondary: #FFFFFF;
+  --theme-background-tertiary: #F8F8F8;
+  --theme-surface: #FFFFFF;
+  --theme-surface-elevated: #FFFFFF;
+  
+  /* Text Colors */
+  --theme-text-primary: #000000;
+  --theme-text-secondary: #00000099;
+  --theme-text-tertiary: #666666;
+  --theme-text-muted: #00000099;
+  --theme-text-inverse: #FFFFFF;
+  
+  /* Border Colors */
+  --theme-border: #E0E0E0;
+  --theme-border-light: #F0F0F0;
+  --theme-border-dark: #D0D0D0;
+  
+  /* Link Colors */
+  --theme-link: #0A66C2;
+  --theme-link-hover: #004182;
+  
+  /* Status Colors */
+  --theme-success: #057642;
+  --theme-success-light: rgba(5, 118, 66, 0.1);
+  --theme-warning: #915907;
+  --theme-warning-light: rgba(145, 89, 7, 0.1);
+  --theme-error: #CC1016;
+  --theme-error-light: rgba(204, 16, 22, 0.1);
+  --theme-info: #0A66C2;
+  --theme-info-light: rgba(10, 102, 194, 0.1);
+  
+  /* Component Specific Colors */
+  --theme-header-bg: #FFFFFF;
+  --theme-header-text: #000000;
+  --theme-nav-dropdown-bg: #FFFFFF;
+  
+  --theme-course-header-bg: #F3F2EF;
+  --theme-course-header-text: #000000;
+  
+  --theme-button-primary-bg: #0A66C2;
+  --theme-button-primary-text: white;
+  --theme-button-primary-hover: #004182;
+  
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text: #0A66C2;
+  --theme-button-secondary-border: #0A66C2;
+  --theme-button-secondary-hover-bg: rgba(10, 102, 194, 0.08);
+  
+  --theme-card-bg: #FFFFFF;
+  --theme-card-border: #E0E0E0;
+  --theme-card-shadow: rgba(0, 0, 0, 0.08);
+  
+  --theme-input-bg: #FFFFFF;
+  --theme-input-border: #CACBCC;
+  --theme-input-text: #000000;
+  
+  --theme-overlay-bg: rgba(0, 0, 0, 0.7);
+  
+  /* Hover and Interaction States */
+  --theme-hover-bg: #F3F2EF;
+  --theme-hover-bg-light: rgba(0, 0, 0, 0.04);
+  --theme-active-bg: #E6E6E6;
+  
+  /* Progress Colors */
+  --theme-progress-bg: #E0E0E0;
+  --theme-progress-fill: #057642;
+  
+  /* Module/Content Colors */
+  --theme-module-icon: #0A66C2;
+  --theme-module-completed: #057642;
+  --theme-module-in-progress: #915907;
+  
+  /* Sidebar Colors */
+  --theme-sidebar-bg: #FFFFFF;
+  --theme-sidebar-border: #E0E0E0;
+  --theme-sidebar-section-border: #E0E0E0;
+  
+  /* User Avatar Colors */
+  --theme-avatar-bg: #0A66C2;
+  --theme-avatar-text: #FFFFFF;
+  
+  /* Dropdown Menu Colors */
+  --theme-dropdown-bg: #FFFFFF;
+  --theme-dropdown-border: #E0E0E0;
+  --theme-dropdown-shadow: rgba(0, 0, 0, 0.15);
+  --theme-dropdown-hover: #F3F2EF;
+}

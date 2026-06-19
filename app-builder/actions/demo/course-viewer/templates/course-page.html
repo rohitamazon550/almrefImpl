@@ -1,0 +1,107 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{course.courseTitle}} - Course Viewer</title>
+  <meta name="description" content="{{course.courseDescription}}">
+  <meta name="author" content="ALM Course Viewer">
+  <meta name="timestamp" content="{{course.timestamp}}">
+  
+  <!-- Course Meta Tags for EDS Indexing -->
+  <meta name="course-id" content="{{course.courseId}}">
+  <meta name="course-title" content="{{course.courseTitle}}">
+  <meta name="course-duration" content="{{course.courseDuration}}">
+  <meta name="course-skill-level" content="{{course.courseLevel}}">
+  <meta name="course-skills" content="{{course.courseSkills}}">
+  <meta name="course-type" content="{{course.courseType}}">
+  <meta name="course-rating" content="{{course.ratingAvg}}">
+  <meta name="course-enrollment-count" content="{{course.enrollmentCount}}">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{course.courseTitle}} - Course Viewer">
+  <meta property="og:description" content="{{course.courseDescription}}">
+  {{#if course.imageUrl}}
+  <meta property="og:image" content="{{course.imageUrl}}">
+  {{/if}}
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="hero">
+        <div>
+          <div>
+            <h1>{{course.courseTitle}}</h1>
+          </div>
+          <div>
+            <picture>
+              <img src="{{#if course.imageUrl}}{{course.imageUrl}}{{else}}https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80{{/if}}"
+                alt="{{course.courseTitle}}">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Course Information</h2>
+        <p>Welcome to the course overview. This page demonstrates how EDS blocks combine with dynamic course data from Adobe Learning Manager to create rich, interactive learning experiences. Below you'll find detailed information about this course.</p>
+      </div>
+      <div class="course-info">
+        <div>
+          <div class="course-info-container">
+            <div class="course-header">
+              <h2 class="course-title">{{course.courseTitle}}</h2>
+              <p class="course-id">Course ID: {{course.courseId}}</p>
+              <p class="course-type">{{course.courseType}}</p>
+            </div>
+            <div class="course-details">
+              <div class="detail-section">
+                <h3>Course Information</h3>
+                <div class="detail-item">
+                  <span class="detail-label">Duration:</span>
+                  <span class="detail-value">{{course.courseDuration}}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Skill Level:</span>
+                  <span class="detail-value">{{course.courseLevel}}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Skills:</span>
+                  <span class="detail-value">{{course.courseSkills}}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Type:</span>
+                  <span class="detail-value">{{course.courseType}}</span>
+                </div>
+              </div>
+              <div class="detail-section">
+                <h3>Description</h3>
+                <p>{{course.courseDescription}}</p>
+              </div>
+              <div class="detail-section">
+                <h3>Statistics</h3>
+                <div class="detail-item">
+                  <span class="detail-label">Rating:</span>
+                  <span class="detail-value">{{course.ratingAvg}}/5 ({{course.ratingCount}} reviews)</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Enrollments:</span>
+                  <span class="detail-value">{{course.enrollmentCount}}</span>
+                </div>
+              </div>
+              <div class="detail-section">
+                <h3>Actions</h3>
+                <div class="course-actions">
+                  <button class="course-action-btn primary">Enroll Now</button>
+                  <button class="course-action-btn secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

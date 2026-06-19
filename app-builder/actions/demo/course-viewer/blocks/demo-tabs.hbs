@@ -1,0 +1,140 @@
+{{#if tags.length}}
+<div class="section">
+    <h2>🏷️ Tags</h2>
+    <div class="tags">
+        {{#each tags}}
+        <span class="tag">{{this}}</span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+{{#if skillArray.length}}
+<div class="section">
+    <h2>🎯 Skills</h2>
+    <div class="skills">
+        {{#each skillArray}}
+        <span class="skill">{{this}}</span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+{{#if authors.length}}
+<div class="section">
+    <h2>👨‍🏫 Authors</h2>
+    <div class="authors-grid">
+        {{#each authors}}
+        <div class="meta-item">
+            <div class="meta-label">Name</div>
+            <div class="meta-value">{{name}}</div>
+            {{#if email}}
+            <div class="meta-label">Email</div>
+            <div class="meta-value">{{email}}</div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+{{#if instances.length}}
+<div class="section">
+    <h2>📅 Instances</h2>
+    <div class="instances">
+        {{#each instances}}
+        <div class="instance">
+            <div class="instance-header">{{name}}</div>
+            <div class="instance-details">
+                <strong>State:</strong> {{state}}<br>
+                <strong>Enrollment Deadline:</strong> {{enrollmentDeadline}}<br>
+                <strong>Completion Deadline:</strong> {{completionDeadline}}<br>
+                <strong>ID:</strong> {{id}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
+<div class="section">
+    <h2>🔍 Raw API Response</h2>
+    <div class="json-section">
+        <div class="json-content">
+            <pre>{{rawApiData}}</pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.tags { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin: 15px 0; 
+}
+.tag { 
+    background: #667eea; 
+    color: white; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.9em; 
+}
+.skills { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin: 15px 0; 
+}
+.skill { 
+    background: #28a745; 
+    color: white; 
+    padding: 6px 12px; 
+    border-radius: 4px; 
+    font-size: 0.9em; 
+}
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+.instances { 
+    display: grid; 
+    gap: 15px; 
+    margin: 15px 0; 
+}
+.instance { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 6px; 
+    border: 1px solid #e0e0e0; 
+}
+.instance-header { 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 8px; 
+}
+.instance-details { 
+    font-size: 0.9em; 
+    color: #666; 
+}
+.json-section { 
+    background: #f8f8f8; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+    padding: 15px; 
+    margin: 20px 0; 
+}
+.json-content { 
+    background: #2d3748; 
+    color: #e2e8f0; 
+    padding: 20px; 
+    border-radius: 4px; 
+    overflow-x: auto; 
+    font-family: 'Courier New', monospace; 
+    font-size: 0.9em; 
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+</style>

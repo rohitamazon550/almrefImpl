@@ -1,0 +1,71 @@
+<div class="section">
+    <h2>📊 Course Overview</h2>
+    {{#if courseImageUrl}}
+    <img src="{{courseImageUrl}}" alt="{{courseTitle}}" class="course-image">
+    {{/if}}
+    <p><strong>Description:</strong> {{courseDescription}}</p>
+    <p><strong>Overview:</strong> {{{courseOverview}}}</p>
+    
+    <div class="meta-grid">
+        <div class="meta-item">
+            <div class="meta-label">Duration</div>
+            <div class="meta-value">{{courseDuration}}</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Skill Level</div>
+            <div class="meta-value">{{courseLevel}}</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Enrollments</div>
+            <div class="meta-value">{{enrollmentCount}}</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Rating</div>
+            <div class="meta-value">{{ratingAvg}}/5 ({{ratingCount}} reviews)</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.section { 
+    margin-bottom: 30px; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border-left: 4px solid #667eea; 
+    background: #f8f9ff; 
+}
+.section h2 { 
+    margin-top: 0; 
+    color: #333; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px; 
+}
+.meta-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    margin: 20px 0; 
+}
+.meta-item { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 6px; 
+    border: 1px solid #e0e0e0; 
+}
+.meta-label { 
+    font-weight: bold; 
+    color: #666; 
+    font-size: 0.9em; 
+    text-transform: uppercase; 
+    margin-bottom: 5px; 
+}
+.meta-value { 
+    color: #333; 
+    font-size: 1.1em; 
+}
+.course-image { 
+    max-width: 200px; 
+    border-radius: 8px; 
+    margin: 15px 0; 
+}
+</style>

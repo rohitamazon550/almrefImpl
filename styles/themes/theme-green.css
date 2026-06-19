@@ -1,0 +1,100 @@
+/*
+ * Green-White Theme
+ * This file contains all color variables for the green-white theme
+ */
+
+:root[data-theme="green"] {
+  /* Primary Colors */
+  --theme-primary: #10b981;
+  --theme-primary-hover: #059669;
+  --theme-primary-light: rgba(16, 185, 129, 0.1);
+  
+  /* Background Colors */
+  --theme-background: #ffffff;
+  --theme-background-secondary: #f0fdf4;
+  --theme-background-tertiary: #dcfce7;
+  --theme-surface: white;
+  --theme-surface-elevated: #f0fdf4;
+  
+  /* Text Colors */
+  --theme-text-primary: #064e3b;
+  --theme-text-secondary: #065f46;
+  --theme-text-tertiary: #047857;
+  --theme-text-muted: #6b7280;
+  --theme-text-inverse: white;
+  
+  /* Border Colors */
+  --theme-border: #d1fae5;
+  --theme-border-light: #ecfdf5;
+  --theme-border-dark: #a7f3d0;
+  
+  /* Link Colors */
+  --theme-link: #059669;
+  --theme-link-hover: #047857;
+  
+  /* Status Colors */
+  --theme-success: #10b981;
+  --theme-success-light: #d1fae5;
+  --theme-warning: #f59e0b;
+  --theme-warning-light: #fef3c7;
+  --theme-error: #ef4444;
+  --theme-error-light: #fee2e2;
+  --theme-info: #3b82f6;
+  --theme-info-light: #dbeafe;
+  
+  /* Component Specific Colors */
+  --theme-header-bg: #f0fdf4;
+  --theme-header-text: #064e3b;
+  --theme-nav-dropdown-bg: #f0fdf4;
+  
+  --theme-course-header-bg: #059669;
+  --theme-course-header-text: white;
+  
+  --theme-button-primary-bg: #10b981;
+  --theme-button-primary-text: white;
+  --theme-button-primary-hover: #059669;
+  
+  --theme-button-secondary-bg: white;
+  --theme-button-secondary-text: #10b981;
+  --theme-button-secondary-border: #10b981;
+  --theme-button-secondary-hover-bg: #f0fdf4;
+  
+  --theme-card-bg: white;
+  --theme-card-border: #d1fae5;
+  --theme-card-shadow: rgba(16, 185, 129, 0.1);
+  
+  --theme-input-bg: white;
+  --theme-input-border: #d1fae5;
+  --theme-input-text: #064e3b;
+  
+  --theme-overlay-bg: rgba(6, 78, 59, 0.8);
+  
+  /* Hover and Interaction States */
+  --theme-hover-bg: #f0fdf4;
+  --theme-hover-bg-light: rgba(16, 185, 129, 0.05);
+  --theme-active-bg: #dcfce7;
+  
+  /* Progress Colors */
+  --theme-progress-bg: rgba(209, 250, 229, 0.5);
+  --theme-progress-fill: #10b981;
+  
+  /* Module/Content Colors */
+  --theme-module-icon: #059669;
+  --theme-module-completed: #10b981;
+  --theme-module-in-progress: #f59e0b;
+  
+  /* Sidebar Colors */
+  --theme-sidebar-bg: white;
+  --theme-sidebar-border: #d1fae5;
+  --theme-sidebar-section-border: #ecfdf5;
+  
+  /* User Avatar Colors */
+  --theme-avatar-bg: #059669;
+  --theme-avatar-text: white;
+  
+  /* Dropdown Menu Colors */
+  --theme-dropdown-bg: white;
+  --theme-dropdown-border: #d1fae5;
+  --theme-dropdown-shadow: rgba(16, 185, 129, 0.15);
+  --theme-dropdown-hover: #f0fdf4;
+}

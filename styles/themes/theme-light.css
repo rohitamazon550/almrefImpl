@@ -1,0 +1,100 @@
+/*
+ * Light Theme - Default Theme
+ * This file contains all color variables for the light theme
+ */
+
+:root {
+  /* Primary Colors */
+  --theme-primary: #4f46e5;
+  --theme-primary-hover: #4338ca;
+  --theme-primary-light: rgba(79, 70, 229, 0.1);
+  
+  /* Background Colors */
+  --theme-background: white;
+  --theme-background-secondary: #f8f9fa;
+  --theme-background-tertiary: #f1f5f9;
+  --theme-surface: white;
+  --theme-surface-elevated: white;
+  
+  /* Text Colors */
+  --theme-text-primary: #131313;
+  --theme-text-secondary: #333;
+  --theme-text-tertiary: #666;
+  --theme-text-muted: #64748b;
+  --theme-text-inverse: white;
+  
+  /* Border Colors */
+  --theme-border: #e0e0e0;
+  --theme-border-light: #f0f0f0;
+  --theme-border-dark: #d0d0d0;
+  
+  /* Link Colors */
+  --theme-link: #3b63fb;
+  --theme-link-hover: #1d3ecf;
+  
+  /* Status Colors */
+  --theme-success: #4caf50;
+  --theme-success-light: #e8f5e9;
+  --theme-warning: #ff9800;
+  --theme-warning-light: #fff3e0;
+  --theme-error: #dc3545;
+  --theme-error-light: #ffebee;
+  --theme-info: #4285f4;
+  --theme-info-light: #e3f2fd;
+  
+  /* Component Specific Colors */
+  --theme-header-bg: white;
+  --theme-header-text: currentcolor;
+  --theme-nav-dropdown-bg: #f8f8f8;
+  
+  --theme-course-header-bg: #4a4a4a;
+  --theme-course-header-text: white;
+  
+  --theme-button-primary-bg: #4f46e5;
+  --theme-button-primary-text: white;
+  --theme-button-primary-hover: #4338ca;
+  
+  --theme-button-secondary-bg: white;
+  --theme-button-secondary-text: #4f46e5;
+  --theme-button-secondary-border: #4f46e5;
+  --theme-button-secondary-hover-bg: #f8fafc;
+  
+  --theme-card-bg: white;
+  --theme-card-border: #e0e0e0;
+  --theme-card-shadow: rgba(0, 0, 0, 0.1);
+  
+  --theme-input-bg: white;
+  --theme-input-border: #e0e0e0;
+  --theme-input-text: #333;
+  
+  --theme-overlay-bg: rgba(0, 0, 0, 0.8);
+  
+  /* Hover and Interaction States */
+  --theme-hover-bg: #f8f9fa;
+  --theme-hover-bg-light: rgba(0, 0, 0, 0.05);
+  --theme-active-bg: #e2e8f0;
+  
+  /* Progress Colors */
+  --theme-progress-bg: rgba(255, 255, 255, 0.2);
+  --theme-progress-fill: #4caf50;
+  
+  /* Module/Content Colors */
+  --theme-module-icon: #4285f4;
+  --theme-module-completed: #4caf50;
+  --theme-module-in-progress: #ff9800;
+  
+  /* Sidebar Colors */
+  --theme-sidebar-bg: white;
+  --theme-sidebar-border: #e0e0e0;
+  --theme-sidebar-section-border: #f1f5f9;
+  
+  /* User Avatar Colors */
+  --theme-avatar-bg: #666;
+  --theme-avatar-text: white;
+  
+  /* Dropdown Menu Colors */
+  --theme-dropdown-bg: white;
+  --theme-dropdown-border: #e0e0e0;
+  --theme-dropdown-shadow: rgba(0, 0, 0, 0.15);
+  --theme-dropdown-hover: #f8f9fa;
+}
