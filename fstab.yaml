@@ -1,2 +1,5 @@
 mountpoints:
-  /overview: https://1070326-edsalmintegration-stage.adobeioruntime.net/api/v1/web/appbuilder/course-viewer
+  /overview:
+    url: "https://1070326-edsalmintegration-stage.adobeioruntime.net/api/v1/web/appbuilder/course-viewer"
+    type: "markup"
+
